@@ -16,5 +16,6 @@
         ".pytest_cache": true,
         ".dtproject": true
     },
-    "workbench.tree.indent": 24
+    "workbench.tree.indent": 24,
+    "cmake.ignoreCMakeListsMissing": true
 }
