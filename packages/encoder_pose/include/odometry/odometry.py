@@ -15,7 +15,7 @@ def delta_phi(ticks: int, prev_ticks: int, resolution: int) -> Tuple[float, floa
     """
 
     # TODO: these are random values, you have to implement your own solution in here
-    delta_ticks = ticks-prev_ticks
+    delta_ticks = ticks - prev_ticks
     alpha = 2 * np.pi / resolution
     dphi = alpha * delta_ticks
     # ---
@@ -31,7 +31,6 @@ def estimate_pose(
     delta_phi_left: float,
     delta_phi_right: float,
 ) -> Tuple[float, float, float]:
-
     """
     Calculate the current Duckiebot pose using the dead-reckoning model.
 
@@ -56,6 +55,7 @@ def estimate_pose(
     delta_right = delta_phi_right * R
     delta_theta = (delta_right - delta_left) / (baseline)
     delta_dist = (delta_left + delta_right) / 2
+
     x_curr = x_prev + delta_dist * np.cos(theta_prev)
     y_curr = y_prev + delta_dist * np.sin(theta_prev)
     theta_curr = theta_prev + delta_theta
