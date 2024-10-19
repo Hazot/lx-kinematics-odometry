@@ -17,7 +17,7 @@ def delta_phi(ticks: int, prev_ticks: int, resolution: int) -> Tuple[float, floa
     # TODO: these are random values, you have to implement your own solution in here
     delta_ticks = ticks - prev_ticks
     alpha = 2 * np.pi / resolution
-    dphi = alpha * delta_ticks
+    dphi = delta_ticks * alpha
     # ---
     return dphi, ticks
 
